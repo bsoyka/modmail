@@ -5,7 +5,7 @@ from discord import __version__ as discord_version
 from discord.ext.commands import Bot
 from dotenv import load_dotenv
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 load_dotenv()
 bot = Bot(
