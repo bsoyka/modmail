@@ -37,7 +37,7 @@ async def on_message(message):
         await channel.send("", embed=embed)
 
 
-@bot.command()
+@bot.command(aliases=["message", "dm"])
 async def msg(ctx, user: User, *, message: str):
     """
     Sends an anonymous message to a user
