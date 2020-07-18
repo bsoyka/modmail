@@ -1,6 +1,6 @@
 from os import getenv
 
-from discord import Color, Embed, User
+from discord import Activity, ActivityType, Color, Embed, User
 from discord import __version__ as discord_version
 from discord.ext.commands import Bot
 from dotenv import load_dotenv
@@ -8,7 +8,11 @@ from dotenv import load_dotenv
 __version__ = "1.0.0"
 
 load_dotenv()
-bot = Bot(command_prefix="m!", case_insensitive=True)
+bot = Bot(
+    command_prefix="m!",
+    case_insensitive=True,
+    activity=Activity(type=ActivityType.watching, name="m!help"),
+)
 
 
 @bot.event
