@@ -39,6 +39,10 @@ async def on_message(message):
 
 @bot.command()
 async def msg(ctx, user: User, *, message: str):
+    """
+    Sends an anonymous message to a user
+    """
+
     channel = await bot.fetch_channel(getenv("MODMAIL_CHANNEL"))
     if ctx.author.permissions_in(channel).read_messages:
         embed = Embed(title=message)
